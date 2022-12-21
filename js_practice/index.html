@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>hola</h1>
+
+
+  <script>
+    // 23.1 como se calcula el factorial de un numero 
+    // 23.2 creamos una variable n que guarde el valor de un prompt
+    // 23.3 crear una condicion que me verifique si el valor de n es tipò number:
+    //23.3.1 if (typeof n = Number) {calculamos el factorial del numero}
+           //else (enviamos un mensaje de error)
+    
+    let n = prompt("ingresar un numero");
+    let acom = 1;
+
+    if (isNaN(n) === true) {
+      console.log('no es un numero');
+    } else {
+      for(let i = 1; i <= n; i++){
+        acom *= i
+      }
+    }
+    
+    console.log(acom);
+    
+    
+  </script>
+</body>
+</html>
