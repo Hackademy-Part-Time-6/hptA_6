@@ -43,3 +43,51 @@ function area_circulo(radio) {
 for (let i = 1; i <= 10; i++) {
   console.log(area_circulo(i));
 }
+
+// CONSEJOS:
+// Crear una función, tipCalculator(), que tenga dos
+// parámetros: una cadena que represente la calidad del
+// servicio recibido y un número que represente el coste
+// total. Devuelve la propina, como un número, basado en lo
+// siguiente
+
+// 'fatal' debería devolver un 5% de propina.
+// 'ok' debería devolver un 15% de propina.
+// 'bueno' debería devolver un 20% de propina.
+// 'excelente' debería devolver un 30% de propina.
+// Toda la demás propina deben ser predeterminadas al 18%.
+
+/* 1. crear una funcion que calcule la propina 
+   2. nuestros parametros (servicio, coste)
+   3. al llamar la funcion tenemos que devolver lo siguiente
+        'fatal' debería devolver un 5% de propina.
+        'ok' debería devolver un 15% de propina.
+        'bueno' debería devolver un 20% de propina.
+        'excelente' debería devolver un 30% de propina.
+        Toda la demás propina deben ser predeterminadas al 18%.
+*/
+
+function propina(servicio, coste) {
+  let prop = 0
+
+  if (servicio == 'fatal') {
+    prop = coste * 0.05
+  } else if (servicio == 'ok') {
+    prop = coste * 0.15
+  } else if (servicio == 'bueno') {
+    prop = coste * 0.2
+  } else if (servicio == 'exelente') {
+    prop = coste * 0.3
+  } else {
+    prop = coste * 0.18
+  }
+
+  return prop
+}
+
+let douglas_prop = propina('bueno', 30);
+let borja_prop = propina('nada', 15);
+let emilio_prop = propina('ok',50);
+let carlos_prop = propina('exelente',75);
+
+let prop_mesa_1 = [douglas_prop, borja_prop, emilio_prop, carlos_prop]
